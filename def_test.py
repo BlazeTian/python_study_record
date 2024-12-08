@@ -48,10 +48,12 @@
 num = 10
 
 def change():
-    global num
+    # global num #若未加，则下面所示的num变量为局部变量，修改后不会影响全局变量
     num = 20
     print(num)
 
 change()
 print(num) # 输出 20，因为 change() 函数中使用了 global 关键字，将 num 变量声明为全局变量，并修改了它的值
     
+a = []
+print(a)
